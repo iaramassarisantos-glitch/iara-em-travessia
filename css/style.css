@@ -297,7 +297,7 @@ section {
 /* ---------- Estatísticas ---------- */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin: 3rem auto 1rem;
 }
@@ -966,6 +966,60 @@ section {
   font-size: 0.82rem;
   opacity: 0.7;
   text-align: center;
+}
+
+/* ---------- Artigos & textos ---------- */
+.artigos-lista {
+  display: grid;
+  gap: 0.7rem;
+}
+.artigo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--dourado);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  transition: transform 0.15s, box-shadow 0.2s, border-left-color 0.2s;
+  color: inherit;
+}
+a.artigo-item {
+  cursor: pointer;
+}
+a.artigo-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--sombra-forte);
+  border-left-color: var(--laranja);
+}
+.artigo-icone {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.artigo-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+.artigo-titulo-lista {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--texto);
+  line-height: 1.25;
+}
+.artigo-meta-lista {
+  font-size: 0.82rem;
+  color: var(--texto-tenue);
+}
+.artigo-seta {
+  color: var(--laranja);
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 /* ---------- Instagram ---------- */
