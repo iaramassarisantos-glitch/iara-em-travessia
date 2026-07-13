@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iara em Travessia — Diário de Leituras 2026</title>
+  <meta
+    name="description"
+    content="O diário de leituras da Iara em 2026. Resenhas, travessias e livros que atravessam. Inspirado em @iaraemtravessia."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>"
+  />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a href="#" class="logo" data-vista="blog">
+        <span class="onda">🌊</span> Iara em Travessia
+      </a>
+      <nav class="nav">
+        <a href="#" data-vista="blog" class="ativo">Leituras</a>
+        <a href="#" data-vista="estante">Estante</a>
+        <a href="#" data-vista="sobre">Sobre</a>
+      </nav>
+      <div class="acoes-cabecalho">
+        <button class="botao-icone" id="btn-tema" title="Alternar tema">🌙</button>
+        <button class="botao botao-primario" id="btn-nova">✍️ Nova resenha</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ VISTA: BLOG ============ -->
+  <main class="vista ativa" id="vista-blog">
+    <!-- Hero -->
+    <section class="hero">
+      <span class="hero-etiqueta">Diário de leituras · 2026</span>
+      <h1>As histórias que me <em>atravessam</em></h1>
+      <p class="hero-sub">
+        Bem-vinda ao meu cantinho de leitura. Aqui eu guardo as resenhas dos
+        livros que li, estou lendo e sonho em ler neste ano — cada um uma
+        pequena travessia. Um Substack pessoal, feito com calma e café.
+      </p>
+      <div class="hero-acoes">
+        <button class="botao botao-primario" id="btn-nova-hero">✍️ Escrever resenha</button>
+        <a class="botao botao-secundario" href="#leituras">📚 Ver as leituras</a>
+      </div>
+
+      <!-- Estatísticas -->
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-numero" id="stat-lidos">0</div>
+            <div class="stat-rotulo">livros lidos</div>
+          </div>
+          <div class="stat">
+            <div class="stat-numero" id="stat-lendo">0</div>
+            <div class="stat-rotulo">lendo agora</div>
+          </div>
+          <div class="stat">
+            <div class="stat-numero" id="stat-paginas">0</div>
+            <div class="stat-rotulo">páginas viradas</div>
+          </div>
+          <div class="stat">
+            <div class="stat-numero" id="stat-media">—</div>
+            <div class="stat-rotulo">nota média</div>
+          </div>
+        </div>
+        <div class="meta-barra">
+          <div class="meta-topo" id="meta-texto"></div>
+          <div class="barra"><div class="barra-preenchida" id="meta-preenchida"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Destaques -->
+      <div class="titulo-secao">
+        <h2>Em destaque</h2>
+        <p>as leituras que estão me marcando</p>
+      </div>
+      <div class="grade" id="destaques"></div>
+
+      <!-- Todas as leituras -->
+      <section id="leituras">
+        <div class="titulo-secao">
+          <h2>Todas as leituras</h2>
+          <p>filtre, busque e mergulhe</p>
+        </div>
+
+        <div class="filtros">
+          <div class="busca-caixa">
+            <span class="lupa">🔍</span>
+            <input type="text" id="busca" placeholder="Buscar por título, autor ou tema…" />
+          </div>
+          <div class="chips" id="chips-genero"></div>
+          <div class="chips">
+            <button class="chip ativo" data-status="todos">Todos</button>
+            <button class="chip" data-status="lido">📖 Lidos</button>
+            <button class="chip" data-status="lendo">🔖 Lendo</button>
+            <button class="chip" data-status="quero-ler">🌱 Quero ler</button>
+          </div>
+        </div>
+
+        <div class="grade" id="grade"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ VISTA: ARTIGO ============ -->
+  <main class="vista" id="vista-artigo">
+    <article class="artigo" id="artigo-conteudo"></article>
+  </main>
+
+  <!-- ============ VISTA: ESTANTE ============ -->
+  <main class="vista" id="vista-estante">
+    <div class="container">
+      <div class="titulo-secao">
+        <h2>Minha estante de 2026</h2>
+        <p>toque numa lombada para ler a resenha</p>
+      </div>
+      <div id="estante-conteudo"></div>
+    </div>
+  </main>
+
+  <!-- ============ VISTA: SOBRE ============ -->
+  <main class="vista" id="vista-sobre">
+    <div class="sobre">
+      <div class="sobre-cabecalho">
+        <div class="sobre-avatar">🧜‍♀️</div>
+        <h1>Iara em Travessia</h1>
+        <p style="color: var(--texto-tenue)">Diário de leituras · 2026</p>
+      </div>
+      <div class="sobre-corpo">
+        <p>
+          Oi, eu sou a Iara. Na lenda, a Iara é a sereia dos rios que encanta
+          quem escuta seu canto. Eu escolhi esse nome porque acredito que os
+          livros também têm esse poder: te chamam pra dentro d'água e te levam
+          pra lugares que você nem imaginava.
+        </p>
+        <p>
+          Este espaço é o meu <strong>Substack pessoal</strong> — um lugar
+          calmo, sem algoritmo e sem pressa, pra registrar cada livro que
+          atravessa 2026 comigo. Aqui não tem resenha certa nem errada: tem o
+          que o livro mexeu em mim, as frases que sublinhei, as travessias que
+          fiz sentada na poltrona.
+        </p>
+        <p>
+          Se algo aqui te fizer querer abrir um livro, minha missão está
+          cumprida. Vem comigo nessa travessia. 🌊
+        </p>
+        <a
+          class="sobre-insta"
+          href="https://instagram.com/iaraemtravessia"
+          target="_blank"
+          rel="noopener"
+        >
+          📸 @iaraemtravessia no Instagram
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <div>
+        <div class="rodape-logo">🌊 Iara em Travessia</div>
+        <p class="rodape-frase">
+          "Todo livro é um rio: a gente entra de um jeito e sai de outro."
+        </p>
+      </div>
+      <div class="rodape-links">
+        <a href="#" data-vista="blog">Leituras</a>
+        <a href="#" data-vista="estante">Estante</a>
+        <a href="#" data-vista="sobre">Sobre</a>
+        <a href="https://instagram.com/iaraemtravessia" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      Feito com 💛 por Iara · Diário de leituras de 2026
+    </div>
+  </footer>
+
+  <!-- ============ MODAL: NOVA RESENHA ============ -->
+  <div class="modal-fundo" id="modal">
+    <div class="modal">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start">
+        <div>
+          <h2>Nova resenha ✍️</h2>
+          <p class="modal-dica">Registre uma leitura direto por aqui.</p>
+        </div>
+        <button class="botao-icone" id="btn-fechar-modal">✕</button>
+      </div>
+      <form id="form-resenha">
+        <div class="campo">
+          <label>Título do livro *</label>
+          <input type="text" name="titulo" required placeholder="Ex: Torto Arado" />
+        </div>
+        <div class="campo-linha">
+          <div class="campo">
+            <label>Autor(a)</label>
+            <input type="text" name="autor" placeholder="Ex: Itamar Vieira Junior" />
+          </div>
+          <div class="campo">
+            <label>Ano</label>
+            <input type="number" name="ano" placeholder="2019" />
+          </div>
+        </div>
+        <div class="campo-linha">
+          <div class="campo">
+            <label>Gênero</label>
+            <select name="genero" id="campo-genero"></select>
+          </div>
+          <div class="campo">
+            <label>Status</label>
+            <select name="status">
+              <option value="lido">Lido</option>
+              <option value="lendo">Lendo agora</option>
+              <option value="quero-ler">Quero ler</option>
+            </select>
+          </div>
+        </div>
+        <div class="campo-linha">
+          <div class="campo">
+            <label>Páginas</label>
+            <input type="number" name="paginas" placeholder="264" />
+          </div>
+          <div class="campo">
+            <label>Sua nota</label>
+            <div class="nota-select" id="nota-select"></div>
+          </div>
+        </div>
+        <div class="campo">
+          <label>Chamada curta (aparece no cartão)</label>
+          <input type="text" name="resumo" placeholder="Uma frase que resume o que achou" />
+        </div>
+        <div class="campo">
+          <label>Citação favorita (opcional)</label>
+          <input type="text" name="frase" placeholder="Uma frase que você sublinhou" />
+        </div>
+        <div class="campo">
+          <label>Sua resenha</label>
+          <textarea name="resenha" placeholder="Escreva o que o livro mexeu em você… (aperte Enter duas vezes para separar parágrafos)"></textarea>
+        </div>
+        <div class="aviso-local">
+          💾 Esta resenha fica salva <strong>só neste navegador/dispositivo</strong>.
+          Para publicá-la de vez no site (e vê-la em qualquer lugar), copie os dados
+          para o arquivo <code>js/data.js</code>. Veja o passo a passo no README.
+        </div>
+        <div class="modal-acoes">
+          <button type="button" class="botao botao-secundario" id="btn-cancelar">Cancelar</button>
+          <button type="submit" class="botao botao-primario">Salvar resenha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
