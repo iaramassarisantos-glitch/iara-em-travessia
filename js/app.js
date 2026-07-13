@@ -70,14 +70,17 @@ function renderStats() {
     ? (notas.reduce((s, l) => s + l.nota, 0) / notas.length).toFixed(1)
     : "—";
 
+  // A meta do ano conta apenas os livros lidos em 2026
+  const lidos2026 = lidos.filter((l) => (l.dataLeitura || "").startsWith(String(ANO_ATUAL)));
+
   document.getElementById("stat-lidos").textContent = lidos.length;
   document.getElementById("stat-lendo").textContent = lendo.length;
   document.getElementById("stat-paginas").textContent = paginas.toLocaleString("pt-BR");
   document.getElementById("stat-media").textContent = media;
 
-  const pct = Math.min(100, Math.round((lidos.length / META_ANO) * 100));
+  const pct = Math.min(100, Math.round((lidos2026.length / META_ANO) * 100));
   document.getElementById("meta-texto").innerHTML =
-    `<span><strong>${lidos.length}</strong> de ${META_ANO} livros</span><span>${pct}% da meta de ${ANO_ATUAL}</span>`;
+    `<span><strong>${lidos2026.length}</strong> de ${META_ANO} livros lidos em ${ANO_ATUAL}</span><span>${pct}% da meta</span>`;
   setTimeout(() => {
     document.getElementById("meta-preenchida").style.width = pct + "%";
   }, 150);
