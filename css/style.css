@@ -6,22 +6,22 @@
 
 :root {
   /* Cores — tema claro */
-  --agua-profunda: #0f4c5c;
-  --agua: #1f6f78;
-  --agua-clara: #5fa8a8;
-  --dourado: #e9b44c;
-  --dourado-escuro: #c8912f;
-  --terracota: #9b4a3a;
+  --marinho: #223052;
+  --laranja: #cf6a34;
+  --laranja-claro: #e59a5b;
+  --dourado: #e6a935;
+  --dourado-escuro: #c2871f;
+  --terracota: #b0492e;
 
-  --fundo: #fbf7f0;
-  --fundo-cartao: #ffffff;
-  --fundo-suave: #f2ece1;
-  --texto: #22201d;
-  --texto-suave: #5c574f;
-  --texto-tenue: #8a837a;
-  --borda: #e6ddce;
-  --sombra: 0 6px 24px rgba(15, 76, 92, 0.08);
-  --sombra-forte: 0 14px 44px rgba(15, 76, 92, 0.16);
+  --fundo: #fbf3e6;
+  --fundo-cartao: #fffdf8;
+  --fundo-suave: #f4e8d5;
+  --texto: #2b2119;
+  --texto-suave: #5f5347;
+  --texto-tenue: #8f8474;
+  --borda: #e9dcc4;
+  --sombra: 0 6px 24px rgba(120, 70, 30, 0.10);
+  --sombra-forte: 0 16px 44px rgba(120, 60, 25, 0.18);
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -31,22 +31,23 @@
 }
 
 [data-tema="escuro"] {
-  --agua-profunda: #7fd0d8;
-  --agua: #5fb8c0;
-  --agua-clara: #8fd8de;
+  /* Dusk: céu de fim de tarde virando noite */
+  --marinho: #f2d9a8;
+  --laranja: #e89b5a;
+  --laranja-claro: #f0b57c;
   --dourado: #f0c674;
-  --dourado-escuro: #e9b44c;
-  --terracota: #d98a76;
+  --dourado-escuro: #e6a935;
+  --terracota: #e08a6b;
 
-  --fundo: #141b1e;
-  --fundo-cartao: #1c2529;
-  --fundo-suave: #222d31;
-  --texto: #f0ece4;
-  --texto-suave: #c4bdb0;
-  --texto-tenue: #8d867a;
-  --borda: #2c383d;
-  --sombra: 0 6px 24px rgba(0, 0, 0, 0.35);
-  --sombra-forte: 0 14px 44px rgba(0, 0, 0, 0.5);
+  --fundo: #161b28;
+  --fundo-cartao: #1e2434;
+  --fundo-suave: #262d40;
+  --texto: #f2e8d8;
+  --texto-suave: #cabda6;
+  --texto-tenue: #8f8674;
+  --borda: #313a4f;
+  --sombra: 0 6px 24px rgba(0, 0, 0, 0.4);
+  --sombra-forte: 0 16px 44px rgba(0, 0, 0, 0.55);
 }
 
 * {
@@ -112,7 +113,7 @@ button {
   font-family: var(--serif);
   font-weight: 600;
   font-size: 1.25rem;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   letter-spacing: -0.01em;
 }
 
@@ -138,7 +139,7 @@ button {
 
 .nav a:hover,
 .nav a.ativo {
-  color: var(--agua-profunda);
+  color: var(--marinho);
   border-color: var(--dourado);
 }
 
@@ -161,7 +162,7 @@ button {
 
 .botao-icone:hover {
   background: var(--fundo-suave);
-  color: var(--agua-profunda);
+  color: var(--marinho);
 }
 
 /* ---------- Botões ---------- */
@@ -177,7 +178,7 @@ button {
 }
 
 .botao-primario {
-  background: var(--agua-profunda);
+  background: var(--marinho);
   color: #fff;
   box-shadow: var(--sombra);
 }
@@ -196,7 +197,7 @@ button {
   border: 1px solid var(--borda);
 }
 .botao-secundario:hover {
-  border-color: var(--agua-clara);
+  border-color: var(--laranja-claro);
 }
 
 /* ---------- Layout ---------- */
@@ -242,9 +243,10 @@ section {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-      ellipse at top,
-      color-mix(in srgb, var(--agua-clara) 22%, transparent),
-      transparent 60%
+      ellipse 80% 60% at 50% -10%,
+      color-mix(in srgb, var(--dourado) 34%, transparent),
+      color-mix(in srgb, var(--laranja) 20%, transparent) 38%,
+      transparent 68%
     );
   z-index: -1;
 }
@@ -255,7 +257,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--agua);
+  color: var(--laranja);
   background: var(--fundo-suave);
   padding: 0.4rem 1rem;
   border-radius: 999px;
@@ -268,7 +270,7 @@ section {
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   max-width: 14ch;
   margin: 0 auto 1.2rem;
 }
@@ -313,7 +315,7 @@ section {
   font-family: var(--serif);
   font-size: 2.2rem;
   font-weight: 600;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   line-height: 1;
 }
 
@@ -337,7 +339,7 @@ section {
   margin-bottom: 0.5rem;
 }
 .meta-topo strong {
-  color: var(--agua-profunda);
+  color: var(--marinho);
 }
 .barra {
   height: 12px;
@@ -348,7 +350,7 @@ section {
 }
 .barra-preenchida {
   height: 100%;
-  background: linear-gradient(90deg, var(--agua), var(--dourado));
+  background: linear-gradient(90deg, var(--laranja), var(--dourado));
   border-radius: 999px;
   width: 0;
   transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
@@ -400,8 +402,8 @@ section {
 }
 .busca-caixa input:focus {
   outline: none;
-  border-color: var(--agua-clara);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--agua-clara) 25%, transparent);
+  border-color: var(--laranja-claro);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--laranja-claro) 25%, transparent);
 }
 .busca-caixa .lupa {
   position: absolute;
@@ -427,12 +429,12 @@ section {
   transition: all 0.2s;
 }
 .chip:hover {
-  border-color: var(--agua-clara);
+  border-color: var(--laranja-claro);
 }
 .chip.ativo {
-  background: var(--agua-profunda);
+  background: var(--marinho);
   color: #fff;
-  border-color: var(--agua-profunda);
+  border-color: var(--marinho);
 }
 [data-tema="escuro"] .chip.ativo {
   color: #10181b;
@@ -511,7 +513,7 @@ section {
 }
 .status-selo.quero-ler {
   background: rgba(255, 255, 255, 0.85);
-  color: var(--agua-profunda);
+  color: var(--marinho);
 }
 
 .cartao-corpo {
@@ -529,7 +531,7 @@ section {
   color: var(--texto-tenue);
 }
 .genero-tag {
-  color: var(--agua);
+  color: var(--laranja);
   font-weight: 600;
 }
 .cartao-resumo {
@@ -556,7 +558,7 @@ section {
   margin-top: 0.2rem;
 }
 .ler-mais {
-  color: var(--agua);
+  color: var(--laranja);
   font-weight: 600;
 }
 
@@ -581,13 +583,13 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--agua);
+  color: var(--laranja);
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 2rem;
 }
 .voltar:hover {
-  color: var(--agua-profunda);
+  color: var(--marinho);
 }
 
 .artigo-capa {
@@ -611,7 +613,7 @@ section {
   padding-bottom: 1.6rem;
 }
 .artigo-genero {
-  color: var(--agua);
+  color: var(--laranja);
   font-weight: 600;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -660,7 +662,7 @@ section {
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.35rem;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   line-height: 1.5;
 }
 
@@ -682,7 +684,7 @@ section {
 .estante-prateleira h3 {
   font-family: var(--serif);
   font-size: 1.3rem;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -745,14 +747,31 @@ section {
   display: grid;
   place-items: center;
   font-size: 3rem;
-  background: linear-gradient(135deg, var(--agua), var(--dourado));
+  background: linear-gradient(135deg, var(--laranja), var(--dourado));
   box-shadow: var(--sombra-forte);
 }
 .sobre h1 {
   font-family: var(--serif);
   font-size: 2.4rem;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   margin-bottom: 0.5rem;
+}
+.sobre-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.sobre-tags span {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--texto-suave);
+  background: var(--fundo-suave);
+  border: 1px solid var(--borda);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
 }
 .sobre-corpo {
   font-family: var(--serif);
@@ -800,7 +819,7 @@ section {
 .modal h2 {
   font-family: var(--serif);
   font-size: 1.6rem;
-  color: var(--agua-profunda);
+  color: var(--marinho);
   margin-bottom: 0.3rem;
 }
 .modal-dica {
@@ -840,7 +859,7 @@ section {
 .campo select:focus,
 .campo textarea:focus {
   outline: none;
-  border-color: var(--agua-clara);
+  border-color: var(--laranja-claro);
 }
 .campo-linha {
   display: grid;
@@ -895,13 +914,13 @@ section {
 
 /* ---------- Rodapé ---------- */
 .rodape {
-  background: var(--agua-profunda);
+  background: var(--marinho);
   color: rgba(255, 255, 255, 0.9);
   padding: 3rem 1.5rem 2rem;
   margin-top: 4rem;
 }
 [data-tema="escuro"] .rodape {
-  background: #0c1416;
+  background: #10152a;
   border-top: 1px solid var(--borda);
 }
 .rodape-conteudo {
@@ -949,6 +968,115 @@ section {
   text-align: center;
 }
 
+/* ---------- Instagram ---------- */
+.insta {
+  margin: 4rem 0 1rem;
+}
+.insta-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+  flex-wrap: wrap;
+}
+.insta-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--dourado), var(--laranja) 45%, var(--terracota));
+  box-shadow: var(--sombra);
+}
+.insta-info h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--texto);
+  line-height: 1.1;
+}
+.insta-info p {
+  color: var(--texto-tenue);
+  font-size: 0.9rem;
+}
+.insta-info a {
+  color: var(--laranja);
+  font-weight: 600;
+}
+.insta-seguir {
+  margin-left: auto;
+}
+.insta-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1rem;
+}
+.insta-post {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.insta-post:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-forte);
+}
+/* granulado analógico, no estilo dos posts da Iara */
+.insta-post::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+.insta-post::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 55%);
+}
+.insta-glyph {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  font-size: 1.1rem;
+  z-index: 2;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+}
+.insta-tag {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.8rem;
+  z-index: 2;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.32);
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  backdrop-filter: blur(2px);
+}
+.insta-legenda {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.25;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 760px) {
   .nav {
@@ -966,5 +1094,12 @@ section {
   .rodape-conteudo {
     flex-direction: column;
     text-align: center;
+  }
+  .insta-seguir {
+    margin-left: 0;
+    width: 100%;
+  }
+  .insta-grade {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

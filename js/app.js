@@ -354,6 +354,21 @@ function preencherGeneros() {
   sel.innerHTML = GENEROS.map((g) => `<option value="${g}">${g}</option>`).join("");
 }
 
+// -------- Instagram --------
+function renderInstagram() {
+  const cont = document.getElementById("insta-grade");
+  if (!cont || typeof INSTAGRAM === "undefined") return;
+  cont.innerHTML = INSTAGRAM.map((p) => {
+    const gradiente = `linear-gradient(150deg, ${p.cor[0]}, ${p.cor[1]})`;
+    return `
+      <a class="insta-post" style="background:${gradiente}" href="${p.link}" target="_blank" rel="noopener">
+        <span class="insta-glyph">📷</span>
+        ${p.tag ? `<span class="insta-tag">${escapar(p.tag)}</span>` : ""}
+        <span class="insta-legenda">${escapar(p.legenda)}</span>
+      </a>`;
+  }).join("");
+}
+
 // -------- Render geral --------
 function renderTudo() {
   renderStats();
@@ -361,6 +376,7 @@ function renderTudo() {
   renderChips();
   renderGrade();
   renderEstante();
+  renderInstagram();
 }
 
 // -------- Eventos iniciais --------
@@ -399,7 +415,8 @@ function iniciar() {
 
   // Modal
   document.getElementById("btn-nova").addEventListener("click", abrirModal);
-  document.getElementById("btn-nova-hero").addEventListener("click", abrirModal);
+  const btnNovaHero = document.getElementById("btn-nova-hero");
+  if (btnNovaHero) btnNovaHero.addEventListener("click", abrirModal);
   document.getElementById("btn-fechar-modal").addEventListener("click", fecharModal);
   document.getElementById("btn-cancelar").addEventListener("click", fecharModal);
   document.getElementById("modal").addEventListener("click", (e) => {
