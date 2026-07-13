@@ -163,22 +163,42 @@ const LIVROS = [
    - data: quando leu ("2026-06-10"). Opcional.
    - link: o endereço do artigo, pra abrir ao clicar. Opcional.
 
-   >>> Os dois abaixo são EXEMPLOS pra você ver o formato. Apague
-   e coloque os seus. Cada item que você adicionar aqui soma +1
-   no contador de artigos lidos. <<<
+   Cada item que você adicionar aqui soma +1 no contador de
+   artigos lidos. O campo "data" (quando VOCÊ leu) está em branco;
+   é só preencher se quiser que apareça a data ao lado da fonte.
    ============================================================ */
 
 const ARTIGOS = [
   {
-    titulo: "Exemplo: troque por um artigo que você leu",
-    fonte: "Revista ou site",
-    data: "2026-06-10",
+    titulo:
+      "Atuação do psicólogo, SUAS/CRAS e Psicologia Social Comunitária: possíveis articulações",
+    fonte: "Silva & Corgozinho · Psicologia & Sociedade, 2011",
+    data: "",
+    link: "https://www.redalyc.org/articulo.oa?id=309326564003",
+  },
+  {
+    titulo: "Psicologia nas Emergências: uma nova prática a ser discutida",
+    fonte: "Paranhos & Werlang · Psicologia: Ciência e Profissão, 2015",
+    data: "",
+    link: "https://doi.org/10.1590/1982-370301202012",
+  },
+  {
+    titulo: "Cartilha para Atuação em Emergências e Desastres",
+    fonte: "Conselho Federal de Psicologia (CFP), 2023",
+    data: "",
     link: "",
   },
   {
-    titulo: "Exemplo: outro texto avulso",
-    fonte: "Autor ou fonte",
-    data: "2026-06-02",
+    titulo:
+      "Diálogos: Psicologia e a Política de Assistência Social (SUAS, CRAS e CREAS)",
+    fonte: "Revista Diálogos · CFP, Ano 7, Nº 7, 2010",
+    data: "",
+    link: "",
+  },
+  {
+    titulo: "Diálogos: Psicologia do Esporte",
+    fonte: "Revista Diálogos · CFP, Ano 14, Nº 9, 2018",
+    data: "",
     link: "",
   },
 ];
