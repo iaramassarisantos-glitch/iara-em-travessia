@@ -73,8 +73,11 @@ function renderStats() {
   // A meta do ano conta apenas os livros lidos em 2026
   const lidos2026 = lidos.filter((l) => (l.dataLeitura || "").startsWith(String(ANO_ATUAL)));
 
+  const totalArtigos = typeof ARTIGOS !== "undefined" ? ARTIGOS.length : 0;
+
   document.getElementById("stat-lidos").textContent = lidos.length;
   document.getElementById("stat-lendo").textContent = lendo.length;
+  document.getElementById("stat-artigos").textContent = totalArtigos;
   document.getElementById("stat-paginas").textContent = paginas.toLocaleString("pt-BR");
   document.getElementById("stat-media").textContent = media;
 
@@ -354,6 +357,39 @@ function preencherGeneros() {
   sel.innerHTML = GENEROS.map((g) => `<option value="${g}">${g}</option>`).join("");
 }
 
+// -------- Artigos --------
+function renderArtigos() {
+  const secao = document.getElementById("artigos-secao");
+  const cont = document.getElementById("artigos-lista");
+  if (!cont || !secao) return;
+  const lista = typeof ARTIGOS !== "undefined" ? ARTIGOS : [];
+  if (!lista.length) {
+    secao.style.display = "none";
+    return;
+  }
+  secao.style.display = "";
+  cont.innerHTML = lista
+    .map((a) => {
+      const meta = [a.fonte, a.data ? formatarData(a.data) : ""]
+        .filter(Boolean)
+        .map(escapar)
+        .join(" · ");
+      const seta = a.link ? '<span class="artigo-seta">↗</span>' : "";
+      const tag = a.link ? "a" : "div";
+      const href = a.link ? ` href="${escapar(a.link)}" target="_blank" rel="noopener"` : "";
+      return `
+        <${tag} class="artigo-item"${href}>
+          <span class="artigo-icone">📄</span>
+          <span class="artigo-conteudo">
+            <span class="artigo-titulo-lista">${escapar(a.titulo)}</span>
+            ${meta ? `<span class="artigo-meta-lista">${meta}</span>` : ""}
+          </span>
+          ${seta}
+        </${tag}>`;
+    })
+    .join("");
+}
+
 // -------- Instagram --------
 function renderInstagram() {
   const cont = document.getElementById("insta-grade");
@@ -376,6 +412,7 @@ function renderTudo() {
   renderChips();
   renderGrade();
   renderEstante();
+  renderArtigos();
   renderInstagram();
 }
 

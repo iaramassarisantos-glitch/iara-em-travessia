@@ -153,6 +153,37 @@ const LIVROS = [
 ];
 
 /* ============================================================
+   ARTIGOS & TEXTOS AVULSOS
+   ------------------------------------------------------------
+   Aqui entram os artigos, papers e textos que você lê fora dos
+   livros. O contador "artigos lidos" no topo soma quantos estão
+   nesta lista. Cada artigo tem:
+   - titulo: o nome do artigo
+   - fonte: de onde é (revista, site, autor...). Opcional.
+   - data: quando leu ("2026-06-10"). Opcional.
+   - link: o endereço do artigo, pra abrir ao clicar. Opcional.
+
+   >>> Os dois abaixo são EXEMPLOS pra você ver o formato. Apague
+   e coloque os seus. Cada item que você adicionar aqui soma +1
+   no contador de artigos lidos. <<<
+   ============================================================ */
+
+const ARTIGOS = [
+  {
+    titulo: "Exemplo: troque por um artigo que você leu",
+    fonte: "Revista ou site",
+    data: "2026-06-10",
+    link: "",
+  },
+  {
+    titulo: "Exemplo: outro texto avulso",
+    fonte: "Autor ou fonte",
+    data: "2026-06-02",
+    link: "",
+  },
+];
+
+/* ============================================================
    INSTAGRAM — @iaraemtravessia
    ------------------------------------------------------------
    Como o site não puxa os posts em tempo real, você atualiza a
