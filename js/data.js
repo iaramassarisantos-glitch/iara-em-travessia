@@ -163,9 +163,13 @@ const LIVROS = [
    - data: quando leu ("2026-06-10"). Opcional.
    - link: o endereço do artigo, pra abrir ao clicar. Opcional.
 
-   Cada item que você adicionar aqui soma +1 no contador de
-   artigos lidos. O campo "data" (quando VOCÊ leu) está em branco;
-   é só preencher se quiser que apareça a data ao lado da fonte.
+   Cada item soma +1 no contador de artigos lidos. Campos:
+   - titulo, fonte
+   - data: quando VOCÊ leu (opcional). Ex: "2026-06-10"
+   - comentario: o que você achou do texto (aparece em itálico)
+
+   >>> Os comentários abaixo são RASCUNHOS que escrevi a partir do
+   tema de cada texto. Troque pelo que VOCÊ realmente achou. <<<
    ============================================================ */
 
 const ARTIGOS = [
@@ -174,32 +178,37 @@ const ARTIGOS = [
       "Atuação do psicólogo, SUAS/CRAS e Psicologia Social Comunitária: possíveis articulações",
     fonte: "Silva & Corgozinho · Psicologia & Sociedade, 2011",
     data: "",
-    link: "https://www.redalyc.org/articulo.oa?id=309326564003",
+    comentario:
+      "Me ajudou a enxergar na prática o que o psicólogo faz dentro do SUAS e do CRAS. Gostei de ver a Psicologia Social Comunitária saindo da teoria e virando atuação de verdade.",
   },
   {
     titulo: "Psicologia nas Emergências: uma nova prática a ser discutida",
     fonte: "Paranhos & Werlang · Psicologia: Ciência e Profissão, 2015",
     data: "",
-    link: "https://doi.org/10.1590/1982-370301202012",
+    comentario:
+      "Esse chegou num momento certo pra mim. Mostra como a Psicologia atua no meio do caos de um desastre, quando tudo é urgente. Ficou comigo.",
   },
   {
     titulo: "Cartilha para Atuação em Emergências e Desastres",
     fonte: "Conselho Federal de Psicologia (CFP), 2023",
     data: "",
-    link: "",
+    comentario:
+      "Um guia bem prático e direto do CFP. Do tipo que dá vontade de ter à mão, mais mão na massa do que teoria.",
   },
   {
     titulo:
       "Diálogos: Psicologia e a Política de Assistência Social (SUAS, CRAS e CREAS)",
     fonte: "Revista Diálogos · CFP, Ano 7, Nº 7, 2010",
     data: "",
-    link: "",
+    comentario:
+      "Um panorama de como a Psicologia se encaixa na política de assistência social. Denso em alguns trechos, mas importante pra entender o sistema por dentro.",
   },
   {
     titulo: "Diálogos: Psicologia do Esporte",
     fonte: "Revista Diálogos · CFP, Ano 14, Nº 9, 2018",
     data: "",
-    link: "",
+    comentario:
+      "Um lado da Psicologia que eu conhecia menos. Foi curioso olhar pra cabeça por trás do rendimento no esporte.",
   },
 ];
 

@@ -975,28 +975,20 @@ section {
 }
 .artigo-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
-  padding: 1rem 1.2rem;
+  padding: 1.1rem 1.3rem;
   background: var(--fundo-cartao);
   border: 1px solid var(--borda);
   border-left: 4px solid var(--dourado);
   border-radius: 12px;
   box-shadow: var(--sombra);
-  transition: transform 0.15s, box-shadow 0.2s, border-left-color 0.2s;
   color: inherit;
-}
-a.artigo-item {
-  cursor: pointer;
-}
-a.artigo-item:hover {
-  transform: translateX(4px);
-  box-shadow: var(--sombra-forte);
-  border-left-color: var(--laranja);
 }
 .artigo-icone {
   font-size: 1.3rem;
   flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 .artigo-conteudo {
   display: flex;
@@ -1016,10 +1008,16 @@ a.artigo-item:hover {
   font-size: 0.82rem;
   color: var(--texto-tenue);
 }
-.artigo-seta {
-  color: var(--laranja);
-  font-size: 1.1rem;
-  flex-shrink: 0;
+.artigo-comentario {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--texto-suave);
+  border-top: 1px dashed var(--borda);
+  padding-top: 0.5rem;
 }
 
 /* ---------- Instagram ---------- */

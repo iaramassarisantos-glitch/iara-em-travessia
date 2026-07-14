@@ -374,18 +374,15 @@ function renderArtigos() {
         .filter(Boolean)
         .map(escapar)
         .join(" · ");
-      const seta = a.link ? '<span class="artigo-seta">↗</span>' : "";
-      const tag = a.link ? "a" : "div";
-      const href = a.link ? ` href="${escapar(a.link)}" target="_blank" rel="noopener"` : "";
       return `
-        <${tag} class="artigo-item"${href}>
+        <div class="artigo-item">
           <span class="artigo-icone">📄</span>
           <span class="artigo-conteudo">
             <span class="artigo-titulo-lista">${escapar(a.titulo)}</span>
             ${meta ? `<span class="artigo-meta-lista">${meta}</span>` : ""}
+            ${a.comentario ? `<span class="artigo-comentario">“${escapar(a.comentario)}”</span>` : ""}
           </span>
-          ${seta}
-        </${tag}>`;
+        </div>`;
     })
     .join("");
 }
