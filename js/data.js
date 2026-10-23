@@ -210,6 +210,36 @@ const ARTIGOS = [
     comentario:
       "Um lado da Psicologia que eu conhecia menos. Foi curioso olhar pra cabeça por trás do rendimento no esporte.",
   },
+  {
+    titulo: "Luto infantil: o papel vital da psicologia e da família no enfrentamento",
+    fonte: "Reis & Sartori · Cadernos de Psicologia (Juiz de Fora), 2024",
+    data: "",
+    comentario:
+      "Tema delicado e necessário. Gostei do olhar sobre como a família e o brincar ajudam a criança a elaborar a perda. Sendo dos Cadernos de Juiz de Fora, soou perto de casa.",
+  },
+  {
+    titulo:
+      "Práticas de acolhimento pedagógico e emocional na Educação Infantil com crianças em processo de luto",
+    fonte: "Moura, Rabelo, Malheiro & Mourão · Revista PEMO, 2024",
+    data: "",
+    comentario:
+      "Olha o luto pelo lado da escola: como acolher a criança enlutada na educação infantil. Um recorte que eu não tinha parado pra pensar.",
+  },
+  {
+    titulo: "Luto infantil: como a perda dos pais pode impactar no desenvolvimento da criança",
+    fonte: "Scaravonatto & Maravilha · Revista Contemporânea, 2024",
+    data: "",
+    comentario:
+      "Foca no impacto da perda dos pais no desenvolvimento. Pesado de ler, mas importante pra entender as marcas que ficam.",
+  },
+  {
+    titulo:
+      "Avaliação psicológica no contexto do luto infantil: contribuições da Teoria Bioecológica do Desenvolvimento Humano",
+    fonte: "Menezes & Borsa (PUC-Rio) · Diversitas, 2022",
+    data: "",
+    comentario:
+      "O mais técnico do grupo, sobre avaliação psicológica e a teoria bioecológica. Bom pra parte mais metodológica do tema.",
+  },
 ];
 
 /* ============================================================
