@@ -65,6 +65,44 @@ const LIVROS = [
       "Robert Leahy, nome forte da terapia cognitiva, parte da ideia de que não são as emoções que nos adoecem, mas o que acreditamos sobre elas. O livro ajuda a identificar os próprios esquemas emocionais e a lidar melhor com ansiedade e tristeza.\n\n[✍️ Tô no comecinho (página 21). Esta resenha vai crescendo conforme eu avanço na leitura.]",
   },
   {
+    id: "e-sempre-a-hora-da-nossa-morte-amem",
+    titulo: "É sempre a hora da nossa morte amém",
+    autor: "Mariana Salomão Carrara",
+    ano: 2021,
+    genero: "Literatura Brasileira",
+    status: "lendo",
+    nota: 0,
+    paginas: 240,
+    dataLeitura: "",
+    destaque: true,
+    cor: ["#223052", "#cf6a34"],
+    frase: "",
+    progresso: 26,
+    resumo:
+      "Um romance sobre finitude, memórias e os afetos que ficam.",
+    resenha:
+      "Mariana Salomão Carrara constrói uma narrativa sobre a finitude, a memória e os afetos: o que a gente carrega de quem ama e de quem se vai.\n\n[✍️ Tô lendo (26%). A resenha vai crescendo conforme eu avanço.]",
+  },
+  {
+    id: "as-vacas-nao-me-olham-mais-na-cara",
+    titulo: "As vacas não me olham mais na cara",
+    autor: "Dora Freind",
+    ano: 2026,
+    genero: "Literatura Brasileira",
+    status: "lendo",
+    nota: 0,
+    paginas: 136,
+    dataLeitura: "",
+    destaque: true,
+    cor: ["#6a3d2e", "#e6a935"],
+    frase: "",
+    progresso: 11,
+    resumo:
+      "Estreia de Dora Freind: uma menina sem nome que cresce entre vacas, em prosa quase poética.",
+    resenha:
+      "Romance de estreia de Dora Freind, numa prosa que beira a poesia. A narradora é uma menina sem nome que vive entre vacas numa cidade do interior, com uma mãe que emudeceu depois do parto.\n\n[✍️ Tô no comecinho (11%). A resenha vai crescendo.]",
+  },
+  {
     id: "tres-ensaios-sobre-o-amor",
     titulo: "Três ensaios sobre o amor",
     autor: "Sigmund Freud",
@@ -74,7 +112,7 @@ const LIVROS = [
     nota: 4,
     paginas: 144,
     dataLeitura: "2026-05-25",
-    destaque: true,
+    destaque: false,
     cor: ["#b0432b", "#e6a935"],
     frase: "",
     resumo:
@@ -92,7 +130,7 @@ const LIVROS = [
     nota: 4,
     paginas: 160,
     dataLeitura: "2026-05-24",
-    destaque: true,
+    destaque: false,
     cor: ["#223052", "#cf6a34"],
     frase: "",
     resumo:
