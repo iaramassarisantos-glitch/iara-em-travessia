@@ -11,6 +11,8 @@
    - genero: um dos gêneros da lista GENEROS
    - status: "lido", "lendo" ou "quero-ler"
    - nota: de 0 a 5 (aceita meio, tipo 4.5). Use 0 se não avaliou.
+   - progresso: só para "lendo" — a % que você já leu (0 a 100).
+     Aparece como uma barrinha no cartão e na página do livro.
    - paginas, dataLeitura ("2026-05-25")
    - destaque: true para aparecer em destaque na home
    - cor: as duas cores da capa. Ex: ["#cf6a34", "#e6a935"]
@@ -39,7 +41,7 @@ const GENEROS = [
 ];
 
 // Meta de leitura do ano (a barra conta os livros lidos em 2026)
-const META_ANO = 24;
+const META_ANO = 28;
 const ANO_ATUAL = 2026;
 
 const LIVROS = [

@@ -1130,6 +1130,47 @@ section {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* ---------- Progresso de leitura (livros em andamento) ---------- */
+.progresso-livro {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.progresso-barra {
+  flex: 1;
+  height: 8px;
+  background: var(--fundo-suave);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+}
+.progresso-preenchida {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--laranja), var(--dourado));
+}
+.progresso-rotulo {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--laranja);
+  white-space: nowrap;
+}
+.progresso-artigo {
+  background: var(--fundo-suave);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+.progresso-topo {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--marinho);
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
 /* ---------- Barra de navegação inferior (app) ---------- */
 .tabbar {
   display: none;
