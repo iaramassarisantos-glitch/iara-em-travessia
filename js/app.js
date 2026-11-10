@@ -98,6 +98,14 @@ function cartaoHTML(livro) {
       : "";
   const rascunho = livro.local ? '<span class="selo-rascunho">rascunho</span>' : "";
   const data = livro.dataLeitura ? formatarData(livro.dataLeitura) : statusRotulo(livro.status);
+  const pct = Math.max(0, Math.min(100, livro.progresso || 0));
+  const barraProgresso =
+    livro.status === "lendo"
+      ? `<div class="progresso-livro">
+           <div class="progresso-barra"><div class="progresso-preenchida" style="width:${pct}%"></div></div>
+           <span class="progresso-rotulo">${pct}% lido</span>
+         </div>`
+      : "";
 
   return `
     <article class="cartao" data-id="${livro.id}">
@@ -115,6 +123,7 @@ function cartaoHTML(livro) {
           <span>${livro.ano || ""}</span>
         </div>
         <div class="estrelas-linha">${estrelasHTML(livro.nota)}</div>
+        ${barraProgresso}
         <p class="cartao-resumo">${escapar(livro.resumo || "")}</p>
         <div class="cartao-rodape">
           <span>${data}</span>
@@ -200,6 +209,14 @@ function abrirArtigo(id) {
   const citacao = livro.frase
     ? `<blockquote class="citacao">“${escapar(livro.frase)}”</blockquote>`
     : "";
+  const pctArtigo = Math.max(0, Math.min(100, livro.progresso || 0));
+  const progressoArtigo =
+    livro.status === "lendo"
+      ? `<div class="progresso-artigo">
+           <div class="progresso-topo"><span>📖 Lendo agora</span><span>${pctArtigo}%</span></div>
+           <div class="progresso-barra"><div class="progresso-preenchida" style="width:${pctArtigo}%"></div></div>
+         </div>`
+      : "";
 
   document.getElementById("artigo-conteudo").innerHTML = `
     <a class="voltar" id="btn-voltar">← Voltar às leituras</a>
@@ -220,6 +237,7 @@ function abrirArtigo(id) {
         ${livro.dataLeitura ? `<span>· lido em ${formatarData(livro.dataLeitura)}</span>` : ""}
       </div>
     </header>
+    ${progressoArtigo}
     ${citacao}
     <div class="artigo-corpo">${paragrafos || "<p><em>Resenha em breve…</em></p>"}</div>
     <footer class="artigo-rodape">
