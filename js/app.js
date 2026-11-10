@@ -271,6 +271,9 @@ function mostrarVista(nome) {
   document.querySelectorAll(".nav a").forEach((a) => {
     a.classList.toggle("ativo", a.dataset.vista === nome);
   });
+  document.querySelectorAll(".tabbar .tab").forEach((t) => {
+    t.classList.toggle("ativo", t.dataset.vista === nome);
+  });
 }
 
 // -------- Tema claro/escuro --------
@@ -451,6 +454,8 @@ function iniciar() {
   document.getElementById("btn-nova").addEventListener("click", abrirModal);
   const btnNovaHero = document.getElementById("btn-nova-hero");
   if (btnNovaHero) btnNovaHero.addEventListener("click", abrirModal);
+  const tabNova = document.getElementById("tab-nova");
+  if (tabNova) tabNova.addEventListener("click", abrirModal);
   document.getElementById("btn-fechar-modal").addEventListener("click", fecharModal);
   document.getElementById("btn-cancelar").addEventListener("click", fecharModal);
   document.getElementById("modal").addEventListener("click", (e) => {
