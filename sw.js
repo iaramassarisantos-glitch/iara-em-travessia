@@ -3,13 +3,13 @@
    mais nova do site; sem internet, usa o que ficou guardado. Assim as
    suas atualizações aparecem sem travar, e o app abre offline. */
 
-const CACHE = "travessia-v1";
+const CACHE = "travessia-v2";
 const ESSENCIAIS = [
   "./",
   "./index.html",
-  "./css/style.css",
-  "./js/data.js",
-  "./js/app.js",
+  "./css/style.css?v=2",
+  "./js/data.js?v=2",
+  "./js/app.js?v=2",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
