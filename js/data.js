@@ -46,6 +46,25 @@ const ANO_ATUAL = 2026;
 
 const LIVROS = [
   {
+    id: "nao-acredite-em-tudo-que-voce-sente",
+    titulo: "Não Acredite em Tudo que Você Sente",
+    autor: "Robert L. Leahy",
+    ano: 2020,
+    genero: "Psicologia",
+    status: "lendo",
+    nota: 0,
+    paginas: 232,
+    dataLeitura: "",
+    destaque: true,
+    cor: ["#9c2f2a", "#cf6a34"],
+    frase: "",
+    progresso: 9,
+    resumo:
+      "Leahy sobre os esquemas emocionais: entender o que a gente sente sem acreditar cegamente em tudo.",
+    resenha:
+      "Robert Leahy, nome forte da terapia cognitiva, parte da ideia de que não são as emoções que nos adoecem, mas o que acreditamos sobre elas. O livro ajuda a identificar os próprios esquemas emocionais e a lidar melhor com ansiedade e tristeza.\n\n[✍️ Tô no comecinho (página 21). Esta resenha vai crescendo conforme eu avanço na leitura.]",
+  },
+  {
     id: "tres-ensaios-sobre-o-amor",
     titulo: "Três ensaios sobre o amor",
     autor: "Sigmund Freud",
