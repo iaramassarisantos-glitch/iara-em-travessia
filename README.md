@@ -36,6 +36,26 @@ Pronto! É só compartilhar o link. 💛
 
 ---
 
+## 📱 Instalar como app no iPhone (e no Android)
+
+O site é um **PWA**: dá pra colocar na tela de início e ele abre em tela
+cheia, igual a um app (com ícone de pôr do sol e tudo).
+
+**No iPhone (Safari):**
+1. Abra o site no **Safari**: `https://iaramassarisantos-glitch.github.io/iara-em-travessia/`
+2. Toque no botão de **compartilhar** (o quadradinho com a setinha pra cima, embaixo)
+3. Role e toque em **"Adicionar à Tela de Início"**
+4. Confirme em **"Adicionar"**
+
+Pronto! Vai aparecer o ícone na sua tela, e ao abrir ele roda sem a barra
+do navegador, com uma **barrinha de navegação embaixo** (Leituras, Estante,
+Escrever, Sobre).
+
+**No Android (Chrome):** toque no menu (⋮) → **"Instalar app"** ou
+**"Adicionar à tela inicial"**.
+
+---
+
 ## ✍️ Como adicionar as suas próprias resenhas
 
 Existem **dois jeitos**:

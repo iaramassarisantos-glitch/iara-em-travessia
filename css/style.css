@@ -95,6 +95,7 @@ button {
   background: color-mix(in srgb, var(--fundo) 88%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--borda);
+  padding-top: env(safe-area-inset-top);
 }
 
 .cabecalho-conteudo {
@@ -1129,6 +1130,11 @@ section {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* ---------- Barra de navegação inferior (app) ---------- */
+.tabbar {
+  display: none;
+}
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 760px) {
   .nav {
@@ -1153,5 +1159,54 @@ section {
   }
   .insta-grade {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Barra inferior estilo app */
+  body {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom));
+  }
+  .tabbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    background: color-mix(in srgb, var(--fundo) 92%, transparent);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--borda);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 20px rgba(60, 35, 15, 0.08);
+  }
+  [data-tema="escuro"] .tabbar {
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+  }
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 0.55rem 0 0.45rem;
+    color: var(--texto-tenue);
+    font-family: var(--sans);
+    transition: color 0.15s;
+  }
+  .tab-icone {
+    font-size: 1.35rem;
+    line-height: 1;
+    filter: grayscale(0.3);
+    transition: filter 0.15s, transform 0.15s;
+  }
+  .tab-rotulo {
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .tab.ativo {
+    color: var(--marinho);
+  }
+  .tab.ativo .tab-icone {
+    filter: grayscale(0);
+    transform: translateY(-1px) scale(1.08);
   }
 }
